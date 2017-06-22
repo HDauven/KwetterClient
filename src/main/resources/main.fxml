@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" minHeight="500.0" minWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kwetter.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TabPane minHeight="500.0" minWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Kwetter Go">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="usernameGo" layoutX="158.0" layoutY="53.0" prefHeight="26.0" prefWidth="299.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <Label layoutX="46.0" layoutY="55.0" text="Username:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="55.0" />
+                        <Label layoutX="50.0" layoutY="105.0" text="Message:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="105.0" />
+                        <Label layoutX="66.0" layoutY="141.0" text="Timeline:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="155.0" />
+                        <TextField fx:id="messageGo" layoutX="158.0" layoutY="96.0" prefHeight="26.0" prefWidth="299.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0" />
+                        <Button layoutX="353.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleSendTweet" text="Post via JMS" AnchorPane.topAnchor="375.0" />
+                        <ListView fx:id="timelineGo" layoutX="159.0" layoutY="149.0" prefHeight="200.0" prefWidth="296.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0" />
+                        <Button layoutX="150.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleSendSocketTweet" text="Post via Socket" AnchorPane.topAnchor="375.0" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Kwetter Go Plus">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="95.0" layoutY="57.0" text="Username:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="55.0" />
+                        <Label layoutX="104.0" layoutY="99.0" text="Message:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="105.0" />
+                        <Label layoutX="105.0" layoutY="134.0" text="Timeline:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="155.0" />
+                        <TextField fx:id="usernameGoPlus" layoutX="176.0" layoutY="52.0" prefHeight="26.0" prefWidth="198.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <TextField fx:id="messageGoPlus" layoutX="176.0" layoutY="94.0" prefHeight="26.0" prefWidth="199.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0" />
+                        <Button layoutX="150.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleSendSoapTweet" text="Post" AnchorPane.topAnchor="375.0" />
+                        <Button layoutX="382.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleTimelineSoap" text="Refresh" AnchorPane.topAnchor="375.0" />
+                        <ListView fx:id="timelineGoPlus" layoutX="175.0" layoutY="134.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Kwetter Monitor">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="259.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleSearchMonitor" text="Search" />
+                        <Label layoutX="67.0" layoutY="33.0" text="See what people say about:" />
+                        <TextField fx:id="hashtagMonitor" layoutX="67.0" layoutY="63.0" promptText="#hashtag" />
+                        <ListView fx:id="timelineMonitor" layoutX="67.0" layoutY="117.0" prefHeight="314.0" prefWidth="388.0" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</GridPane>

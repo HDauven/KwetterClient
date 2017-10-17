@@ -1,8 +1,9 @@
-# Kwetter Client
-This is a JavaFX based client application for the [Kwetter](https://github.com/HDauven/Kwetter) server application. It is a demonstration of various Java API technologies.  
+# TwitterClone Client
+This is a JavaFX based client application for the [TwitterClone](https://github.com/HDauven/TwitterClone) server application. It is a demonstration of various Java API technologies.  
 
 The following technologies, principles and APIs are demonstrated in this application:
 * JavaFX
+* JavaEE
 * SOAP
 * JMS
 * Websockets
@@ -13,3 +14,4 @@ The following technologies, principles and APIs are demonstrated in this applica
 * Maven
 * Java 8
 * FXML
+* Server-Client architecture
